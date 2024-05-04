@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 export default function Blog() {
   return (
     <div>
@@ -61,7 +62,8 @@ export default function Blog() {
         <div className="blog-left lg:w-3/4 lg:mr-4">
           <h2 className="text-2xl font-bold mb-4">Our Certificate & Online Program</h2>
           <h5 className="mb-4">Aug 1, 2021</h5>
-          <img src="img/post.png" alt="" className="mb-4" />
+          <Image src={'/img/post.png'} height={500} width={600} alt="pic"/>
+          {/* <img src="img/post.png" alt="" className="mb-4" /> */}
           <p className="mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
             dolor consequatur, nobis quae obcaecati delectus at aspernatur,

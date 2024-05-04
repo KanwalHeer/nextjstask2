@@ -126,22 +126,23 @@ export default function Home() {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
     <div className="campus-col bg-white rounded-lg shadow-md overflow-hidden">
 
-
-    <img src="img/banner1.png" alt="HYDERABAD" className="w-full" />
-
-
+    <Image src={'/img/banner1.png'} height={'400'} width={'400'} alt="pic" />
+   
       <div className="layer bg-black bg-opacity-50 py-2 px-4 text-white">
         <h3 className="text-lg font-semibold">DELHI</h3>
       </div>
     </div>
     <div className="campus-col bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="img/Campus2.png" alt="HYDERABAD" className="w-full" />
+
+    <Image src={'/img/Campus2.png'} height={'400'} width={'400'} alt="pic" />
+     
       <div className="layer bg-black bg-opacity-50 py-2 px-4 text-white">
         <h3 className="text-lg font-semibold">HYDERABAD</h3>
       </div>
     </div>
     <div className="campus-col bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="img/Campus3.png" alt="MUMBAI" className="w-full" />
+    <Image src={'/img/Campus3.png'} height={'400'} width={'400'} alt="pic" />
+      
       <div className="layer bg-black bg-opacity-50 py-2 px-4 text-white">
         <h3 className="text-lg font-semibold">MUMBAI</h3>
       </div>
@@ -161,18 +162,22 @@ export default function Home() {
   <h1 className="text-center text-3xl font-bold mb-8">Our Facilities</h1>
   <p className="text-center text-lg mb-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
   <div className="row grid grid-cols-1 md:grid-cols-3 gap-4">
+
     <div className="facilities-col">
-      <img src="img/libary.png" alt="Library" className="w-full rounded-lg shadow-lg" />
+    <Image src={'/img/libary.png'} height={'400'} width={'400'} alt="pic" />
+     
       <h3 className="text-xl font-semibold mt-4">Best Library</h3>
       <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis asperiores atque aperiam.</p>
     </div>
     <div className="facilities-col">
-      <img src="img/playground.png" alt="Athletics" className="w-full rounded-lg shadow-lg" />
+    <Image src={'/img/playground.png'} height={'400'} width={'400'} alt="pic" />
+     
       <h3 className="text-xl font-semibold mt-4">Athletics</h3>
       <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis asperiores atque aperiam.</p>
     </div>
     <div className="facilities-col">
-      <img src="img/food.png" alt="Food" className="w-full rounded-lg shadow-lg" />
+    <Image src={'/img/food.png'} height={'400'} width={'400'} alt="pic" />
+     
       <h3 className="text-xl font-semibold mt-4">Tasty and Healthy Food</h3>
       <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis asperiores atque aperiam.</p>
     </div>
@@ -190,7 +195,8 @@ export default function Home() {
   <p className="text-center text-lg mb-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div className="testimonials-col flex">
-      <img src="img/user.png" alt="User" className="w-12 h-12 rounded-full mr-4" />
+    <Image src={'/img/user.png'} height={'12'} width={'12'} alt="pic" className="w-12 h-12 rounded-full mr-4"/>
+     
       <div>
         <p className="text-gray-700 mb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maiores in nostrum rerum voluptatem praesentium veritatis alias omnis voluptate nisi aperiam, voluptatum quibusdam itaque a deserunt. In quia repellat maxime.
@@ -206,7 +212,8 @@ export default function Home() {
       </div>
     </div>
     <div className="testimonials-col flex">
-      <img src="img/user.png" alt="User" className="w-12 h-12 rounded-full mr-4" />
+    <Image src={'/img/user.png'} height={'12'} width={'12'} alt="pic" className="w-12 h-12 rounded-full mr-4"/>
+     
       <div>
         <p className="text-gray-700 mb-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maiores in nostrum rerum voluptatem praesentium veritatis alias omnis voluptate nisi aperiam, voluptatum quibusdam itaque a deserunt. In quia repellat maxime.

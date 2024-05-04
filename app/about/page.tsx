@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 export default function About() {
   return (
     <div>
@@ -66,7 +67,8 @@ export default function About() {
         <a href="#" className="hero_btn btn py-2 px-4 bg-blue-500 text-white rounded-full inline-block">EXPLORE NOW</a>
       </div>
       <div className="about-col lg:w-1/2 mt-6 lg:mt-0">
-        <img src="img/about.png" alt="" className="w-full rounded-lg" />
+      <Image src={'/img/about.png'} height={500} width={600} alt="pic"/>
+        
       </div>
     </div>
   </div>
