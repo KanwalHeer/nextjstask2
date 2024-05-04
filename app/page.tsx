@@ -1,11 +1,18 @@
-
+'use client'
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"
 
-
+import { useState } from 'react';
 
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const showMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+
+
 
   
   return (
@@ -13,14 +20,14 @@ export default function Home() {
     {/* Created BY - Sagar Developer */}
     <section className="header bg-gray-900 bg-cover bg-center bg-opacity-50 h-[300px]" style={{backgroundImage: "url('img/mainSection.jpg')"}}>
       <nav className="flex items-center justify-between p-4">
+
         <a href="index.html" className="logo flex items-center space-x-2">
           <span className="text-xl font-bold">Xplore</span>
           <i className="fab fa-staylinked" />
           <span className="font-normal">kill</span>
         </a>
-        <div className="nav-links hidden md:block">
-          {/* Responsive bar open and close */}
-          <i className="fa fa-times" />
+        <div className={`nav-links ${isMenuOpen ? 'block' : 'hidden'} md:block`} id="navLinks">
+            <i className="fa fa-times absolute top-3 right-4 cursor-pointer md:hidden" onClick={showMenu}></i>
           <ul className="flex items-center space-x-4">
           <Link href={'/'}>
             <li>
@@ -53,8 +60,8 @@ export default function Home() {
             </Link>
 
           </ul>
-        </div>
-        <i className="fa fa-bars md:hidden"  />
+          </div>
+          <i className={`fa fa-bars md:hidden absolute top-3 right-4 cursor-pointer ${isMenuOpen ? 'hidden' : 'block'}`} onClick={showMenu}></i>
         {/* Responsive bar open and close */}
       </nav>
       <div className="text_box text-center mt-10">

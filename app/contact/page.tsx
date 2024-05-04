@@ -1,5 +1,14 @@
+'use client'
 import Link from "next/link";
+import { useState } from 'react';
 export default function Contact() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const showMenu = () => {
+
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div>
    <>
@@ -10,11 +19,12 @@ export default function Contact() {
       <i className="fab fa-staylinked ml-1" />
       kill
     </a>
-    <div className="nav-links hidden md:block">
-      {/* Responsive bar open and close */}
-      <i className="fa fa-times mr-4" />
-      
-      <ul className="flex items-center space-x-4">
+
+
+
+    <div className={`nav-links ${isMenuOpen ? 'block' : 'hidden'} md:block`} id="navLinks">
+            <i className="fa fa-times absolute top-3 right-4 cursor-pointer md:hidden" onClick={showMenu}></i>
+          <ul className="flex items-center space-x-4">
           <Link href={'/'}>
             <li>
               <a href="/">Home</a>
@@ -46,10 +56,15 @@ export default function Contact() {
             </Link>
 
           </ul>
+          </div>
+          <i className={`fa fa-bars md:hidden absolute top-3 right-4 cursor-pointer ${isMenuOpen ? 'hidden' : 'block'}`} onClick={showMenu}></i>
+        {/* Responsive bar open and close */}
 
 
-    </div>
-    <i className="fa fa-bars md:hidden" />
+
+
+
+
   </nav>
   <h1 className="text-3xl font-bold mt-4 text-center">Contact Us</h1>
 </section>
